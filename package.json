@@ -1,0 +1,20 @@
+{
+  "name": "selenium-test-sample",
+  "version": "1.0.0",
+  "description": "selenium testscripts using javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Selenium",
+    "Javascript"
+  ],
+  "author": "Albert Baby",
+  "license": "MIT",
+  "dependencies": {
+    "chromedriver": "^99.0.0",
+    "geckodriver": "^3.0.1",
+    "selenium-webdriver": "^3.0.1"
+  }
+}
