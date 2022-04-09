@@ -237,6 +237,7 @@
         "mkdirp-classic": "^0.5.3",
         "mockery": "^2.1.0",
         "ms": "^2.1.2",
+        "msedgedriver": "^91.0.0",
         "mute-stream": "^0.0.8",
         "mz": "^2.7.0",
         "nanoclone": "^0.2.1",
