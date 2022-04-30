@@ -13,10 +13,20 @@ Feature: Homepage element validation
     @LinkedInVisa
     Scenario Outline: Search QA in linkedin and VISA
     Given Open linkedin on the browser
-    And click jobs tab
+    # And click jobs tab
     When user searches <SearchTerm> with <Country>
+    # Then collect all jobs with text <textName>
+    
+    Examples:
+        | SearchTerm | Country  | textName |
+        | Qa engineer  | Germany  | VISA  |
+
+    @LinkedInNewVisa
+    Scenario Outline: Search QA in linkedin and VISA
+    Given Open linkedin on the browser
+    When Searches Job <SearchTerm> in Location <Country>
     Then collect all jobs with text <textName>
     
     Examples:
         | SearchTerm | Country  | textName |
-        | Trivago Qa  | Germany  | google  |
+        | QA engineer  | Germany  | Visa  |
