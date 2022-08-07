@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building WebdriverIO'
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     echo 'Testing WebdriverIO'
-                    sh 'npx wdio run wdio.conf.ts'
+                    bat 'npx wdio run wdio.conf.ts'
 
                 }
             }
