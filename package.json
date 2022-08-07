@@ -400,7 +400,7 @@
         "zip-stream": "^4.1.0"
     },
     "devDependencies": {
-        "@wdio/allure-reporter": "^7.19.1",
+        "@wdio/allure-reporter": "^7.19.5",
         "@wdio/appium-service": "^7.19.1",
         "@wdio/cli": "^7.19.1",
         "@wdio/cucumber-framework": "^7.19.1",
