@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    environment {
+        CI = true
+            }
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    echo 'Building WebdriverIO'
+                    sh 'npm install'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    echo 'Testing WebdriverIO'
+                    sh 'npx wdio run wdio.conf.ts'
+
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    echo 'Deploying Hello World'
+                }
+            }
+        }
+    }
+
+}
