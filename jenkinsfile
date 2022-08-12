@@ -8,7 +8,10 @@ pipeline {
             steps {
                 script {
                     echo 'Building WebdriverIO'
+                    sh 'mkdir -p webdriverio'
                     sh 'npm install'
+    
+                    writeFile file: "webdriverio/readme.md", text: "."
                 }
             }
         }
@@ -25,6 +28,15 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying Hello World'
+                }
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                script {
+                    echo 'Cleaning up'
+                    sh 'rm -rf webdriverio'
                 }
             }
         }
