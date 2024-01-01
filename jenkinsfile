@@ -8,7 +8,12 @@ pipeline {
             steps {
                 script {
                     echo 'Building WebdriverIO'
-                    sh 'npm install'
+
+                    // sh 'mkdir -p webdriverio'
+                    // sh 'npm install'
+    
+                    writeFile file: "webdriverio/readme.md", text: "."
+                    bat 'npm install'
                 }
             }
         }
@@ -16,7 +21,7 @@ pipeline {
             steps {
                 script {
                     echo 'Testing WebdriverIO'
-                    sh 'npx wdio run wdio.conf.ts'
+                    bat 'npx wdio run wdio.conf.ts'
 
                 }
             }
@@ -25,6 +30,15 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying Hello World'
+                }
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                script {
+                    echo 'Cleaning up'
+                    sh 'rm -rf webdriverio'
                 }
             }
         }
